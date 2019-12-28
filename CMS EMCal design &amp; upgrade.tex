@@ -174,12 +174,36 @@
 \end{frame}
 
 \begin{frame}{Energy Resolution}
+    Showers in EMCal are reconstructed by building \emph{clusters} of crystals. Best performance is obtained using a simple 3x3 (or 5x5) sliding window centered in the crystal having the maximum energy deposition.
     \begin{figure}
         \centering
-        \includegraphics{./img/resolution.png}
-        \caption{Caption}
-        \label{fig:my_label}
+        \includegraphics[width=.85\textwidth]{./img/resolution_1.png}
+        \caption{Energy Distribution reconstructed during the test beam (pointed to the centre of the supermodule).}
+        \label{fig:res1}
     \end{figure}{}
+\end{frame}
+
+\begin{frame}{Energy Resolution}
+    \begin{figure}
+        \centering
+        \includegraphics[height=150pt]{./img/resolution_2.png}
+        \caption{Energy distribution reconstructed during the test beam (pointed to a \emph{corner} of the supermodule). A single correction function, parametrized from the data, was applied to all regions of the supermodule to take into account variations in shower containment.}
+        \label{fig:res2}
+    \end{figure}{}
+\end{frame}
+
+\begin{frame}{Energy Resolution}
+    Energy Resolution can be parametrized as a function of energy
+    \begin{equation}
+        \biggl(\frac{\sigma}{E}\biggr)^2 = \biggl(\frac{S}{\sqrt{E}}\biggr)^2 + \biggl(\frac{N}{E}\biggr)^2 + C^2 ,
+    \end{equation}
+    where 
+    \begin{itemize}
+        \item S is the stochastic term
+        \item N is the noise
+        \item C is a constant term
+    \end{itemize}
+    
 \end{frame}
 
 \begin{frame}{Calibration}
