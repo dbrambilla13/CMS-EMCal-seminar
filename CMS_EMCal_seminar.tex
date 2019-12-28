@@ -197,16 +197,44 @@
     \begin{equation}
         \biggl(\frac{\sigma}{E}\biggr)^2 = \biggl(\frac{S}{\sqrt{E}}\biggr)^2 + \biggl(\frac{N}{E}\biggr)^2 + C^2 ,
     \end{equation}
-    where 
-    \begin{itemize}
-        \item S is the stochastic term
-        \item N is the noise
-        \item C is a constant term
-    \end{itemize}
+  
+    \begin{columns}
+        \begin{column}[l]{0.45\textwidth}
+        \begin{itemize}
+            \item S is the \textbf{stochastic} term
+            \item N is the \textbf{noise}
+            \item C is a \textbf{constant} term
+        \end{itemize}
+        \end{column}
+        \begin{column}[l]{0.45\textwidth}
+            \begin{figure}
+            \includegraphics[width=\textwidth]{./img/res_energy.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
     
 \end{frame}
 
 \begin{frame}{Calibration}
+    It is a \emph{severe technical challenge}.
+    Naturally divided in two parts:
+    \begin{itemize}
+        \item \textbf{Absolute energy scale}
+        \item \textbf{Inter-calibration}
+    \end{itemize}
+    The final energy measurement is given by
+    \begin{equation}
+        E_{e,\gamma} = G \times \mathcal{F} \times \sum_i c_i \times A_i
+    \end{equation}
+    where
+    \begin{itemize}
+        \item $G$ is a \emph{global absolute scale}
+        \item $\mathcal{F}$ is a \emph{correction function} depending on particle type, position, momentum...
+        \item $c_i$ are the \emph{inter-calibration coefficients}
+        \item $A_i$ are the \emph{signal amplitudes} summed over the cluster of crystals 
+    \end{itemize}{}
+    
+    
     
 \end{frame}
 
