@@ -1,0 +1,8 @@
+\frametitle{EM Calorimeter}
+non mi piace molto questa foto, vedi se ne trovi una migliore...
+  \begin{figure}
+        \centering
+        \includegraphics[width=.85\textwidth]{./img/ecal_barrel_photo.jpg}
+        \caption{inserire didascalia}
+        \label{fig:cms_barrel_photo}
+    \end{figure}
