@@ -12,6 +12,8 @@
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 
+\usepackage{subfig}
+
 \title{CMS Electromagnetic Calorimeter}
 \subtitle{Design and Upgrade for HLLHC}
 \date{\today}
@@ -79,16 +81,16 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Design}
+\begin{frame}{EM Calorimeter Design}
     \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{./img/EMCal_Scheme.png}
-        \caption{emcal scheme}
+        \caption{Emcal Scheme}
         \label{fig:emcalScheme}
     \end{figure}
 \end{frame}
 
-\begin{frame}[fragile]{EM Calorimeter}
+\begin{frame}[fragile]{Barrel EM Calorimeter}
   non mi piace molto questa foto, vedi se ne trovi una migliore...
   \begin{figure}
         \centering
@@ -98,7 +100,7 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Frame Title}
+\begin{frame}{Endcap EM Calorimeter}
     \begin{figure}
         \centering
         \includegraphics[width=.85\textwidth]{./img/ecal_endcap_photo.jpg}
@@ -107,15 +109,15 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Design}
-    non mi piace molto questa immagine.. ma è un supermodulo del barrel
-    \begin{figure}
-        \centering
-        \includegraphics[width=100pt]{./img/emcal_module.png}
-        \caption{EmCal module}
-        \label{fig:emcalModule}
-    \end{figure}
-\end{frame}
+%\begin{frame}{Design}
+%    non mi piace molto questa immagine.. ma è un supermodulo del barrel
+%    \begin{figure}
+%        \centering
+%        \includegraphics[width=100pt]{./img/emcal_module.png}
+%        \caption{EmCal module}
+%        \label{fig:emcalModule}
+%    \end{figure}
+%\end{frame}
 
 \begin{frame}{Lead Tungstate ($\text{PbWO}_4$) Crystals}
     \begin{columns}
@@ -241,8 +243,8 @@
     Various methods are used to obtain values for the parameters in equation \eqref{eq:calib}. These methods include:
     
     \begin{itemize}
-        \item \textbf{Testbeam precalibration}.
-        \item \textbf{Lab. Measurements} giving a first estimate of the $c_i$ coefficients.
+        \item \textbf{Testbeam} precalibration.
+        \item \textbf{Lab. Measurements} of the crystals light yield, giving a first estimate of the $c_i$ coefficients.
         \item \textbf{Phi independence} Taking advantage of the $\phi$ symmetry of deposited energy to inter-calibrate crystal rings at constant $\eta$.
         \item \textbf{Single electrons} Exploiting single electrons $p$ measurements from the \emph{tracker} to inter-calibrate different crystals in a single module.
         \item \textbf{Z $\rightarrow$ ee} Reconstruction of the ee invariant mass and calibration exploiting the Z mass constraint, studying the distribution of 
@@ -262,12 +264,31 @@
     \end{figure}
 \end{frame}
 
+
+
 \begin{frame}{Single Electrons Method}
-    
+    \begin{figure}
+        \centering
+        \subfloat[][]{
+            \includegraphics[width=.52\textwidth]{./img/single_e.png}
+            } 
+        \quad
+        \subfloat[][]{
+            \includegraphics[width=.37\textwidth]{./img/single_e_endcap.png}
+        }
+        \caption{Calibration precision vs $\eta$ obtained with the single electrons method. (a) barrel case (b) endcap case.}
+        \label{fig:single_electron}
+    \end{figure}
+
 \end{frame}
 
 \begin{frame}{Z $\rightarrow$ ee Method}
-    
+    \begin{figure}
+        \centering
+        \includegraphics[width=.75\textwidth]{./img/Zee_corr_factor.png}
+        \caption{Correction factor $\mathcal{F}$ \eqref{eq:calib} in dependence of $ \eta$, as extracted with the Zee method. \emph{Golden} comes from a MC simulation, \emph{showering} is obtained from $2\,\text{fb}^{-1}$ of Z $\rightarrow$ ee with intercalibration precision at $2\%$.}
+        \label{fig:Zee_correction_factor}
+    \end{figure}{}
 \end{frame}
 
 \section{HL-LHC Upgrade}
