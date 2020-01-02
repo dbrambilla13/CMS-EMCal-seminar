@@ -220,47 +220,55 @@
     Naturally divided in two parts:
     \begin{itemize}
         \item \textbf{Absolute energy scale}
-        \item \textbf{Inter-calibration}
+        \item \textbf{Inter-calibration} Needed since single crystals have different scintillation light yield ($\sim 8\%$ RMS)
     \end{itemize}
     The final energy measurement is given by
     \begin{equation}
         E_{e,\gamma} = G \times \mathcal{F} \times \sum_i c_i \times A_i
+    \label{eq:calib}
     \end{equation}
     where
     \begin{itemize}
         \item $G$ is a \emph{global absolute scale}
-        \item $\mathcal{F}$ is a \emph{correction function} depending on particle type, position, momentum...
+        \item $\mathcal{F}$ is a \emph{correction function} depending on particle type, position, $\eta$, momentum...
         \item $c_i$ are the \emph{inter-calibration coefficients}
         \item $A_i$ are the \emph{signal amplitudes} summed over the cluster of crystals 
     \end{itemize}{}
     
 \end{frame}
 
-\begin{frame}{Inter-calibration}
-    Calibration between different crystals of the calorimeter relatively to the absolute energy scale.
+\begin{frame}{Calibration}
+    Various methods are used to obtain values for the parameters in equation \eqref{eq:calib}. These methods include:
     
-    Measured with various methods:
     \begin{itemize}
+        \item \textbf{Testbeam precalibration}.
+        \item \textbf{Lab. Measurements} giving a first estimate of the $c_i$ coefficients.
         \item \textbf{Phi independence} Taking advantage of the $\phi$ symmetry of deposited energy to inter-calibrate crystal rings at constant $\eta$.
         \item \textbf{Single electrons} Exploiting single electrons $p$ measurements from the \emph{tracker} to inter-calibrate different crystals in a single module.
-        \item \textbf{$\text{Z} \rightarrow \text{ee}$} Reconstruction of the $ee$ invariant mass and calibration exploiting the $Z$ mass constraint, studying the distribution of 
+        \item \textbf{Z $\rightarrow$ ee} Reconstruction of the ee invariant mass and calibration exploiting the Z mass constraint, studying the distribution of 
         \begin{equation}
             \epsilon^i = \frac{1}{2} \biggl[\biggl(\frac{M^i_\text{inv}}{M_Z}\biggr)^2 - 1\biggr]
-        \end{equation}{}
-    \end{itemize}{}
+        \end{equation}
+    \end{itemize}
     
 \end{frame}
 
-\begin{frame}{Inter-calibration}
+\begin{frame}{Phi Independence Method}
     \begin{figure}
         \centering
-        \includegraphics[height=150pt]{./img/intercalib_phi.png}
-        \caption{Intercalibration precision as function on $\eta$, for barrel and endcap.}
+        \includegraphics[width=\textwidth]{./img/intercalib_phi.png}
+        \caption{Intercalibration precision as function on $\eta$, for barrel and endcap, for the \emph{phi-indipendence} method.}
         \label{fig:intercalib_phi}
     \end{figure}
+\end{frame}
+
+\begin{frame}{Single Electrons Method}
     
-    immagini per Se e Zee
-\end{frame}{}
+\end{frame}
+
+\begin{frame}{Z $\rightarrow$ ee Method}
+    
+\end{frame}
 
 \section{HL-LHC Upgrade}
 
