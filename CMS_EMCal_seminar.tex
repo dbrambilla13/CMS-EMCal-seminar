@@ -168,12 +168,13 @@
 \end{frame}
 
 \begin{frame}{Pre-shower Detector}
-    Sampling calorimeter with two layers: lead radiators with silicon strip sensors placed in between.
+    \emph{Sampling} calorimeter with two layers: lead radiators with silicon strip sensors placed in between.
+    Located in the \emph{forward region}, where the angle between couples of photons is more likely to be small, due to the boost of the $\pi_0$.
     
     Main purposes:
     \begin{itemize}
         \item principal aim: the identification of neutral pions (from their decay products $\pi_0 \rightarrow \gamma \gamma$) within a fiducial region $1.653 < |\eta| < 2.6 $  
-        \item improve position determination of e and $\gamma$ 
+        \item improve position determination of e and $\gamma$ due to its finer granularity (silicon strips $p\simeq2\,$mm).
         \item help electron identification against minimum ionizing particles.
     \end{itemize}{}
     
@@ -296,13 +297,48 @@
         \includegraphics[width=.75\textwidth]{./img/Zee_corr_factor.png}
         \caption{Correction factor $\mathcal{F}$ \eqref{eq:calib} in dependence of $ \eta$, as extracted with the Zee method. \emph{Golden} comes from a MC simulation, \emph{showering} is obtained from $2\,\text{fb}^{-1}$ of Z $\rightarrow$ ee with intercalibration precision at $2\%$.}
         \label{fig:Zee_correction_factor}
-    \end{figure}{}
+    \end{figure}
 \end{frame}
 
 \section{HL-LHC Upgrade}
 
+\begin{frame}{High Luminosity LHC Upgrade}
+    Objective: reach Integrated luminosity 3000\,fb^{-1}
+    
+    significative challenges due to High radiation environment and higher pileup
+    
+    various upgrades to the detector will be necessary
+    
+\end{frame}
 
-\begin{frame}{Conclusion}
+\begin{frame}{Calorimeter upgrade}
+    In particular also the calorimeters must be upgraded
+    
+    endcap calorimeter is where the radiations are higher, so it will be entirely replaced 
+    
+    \begin{figure}
+        \centering
+        \includegraphics{}
+        \caption{Caption}
+        \label{fig:my_label}
+    \end{figure}{}
+    
+\end{frame}
+
+\begin{frame}{High Granularity Calorimeter (HGCal)}
+     It features unprecedented transverse and longitudinal segmentation for both electromagnetic (ECAL) and hadronic (HCAL) compartments.
+
+    fine structure of showers can be measured and used to enhance pileup rejection and particle identification, whilst still achieving good energy resolution
+    
+    The ECAL and a large fraction of HCAL will be based on hexagonal silicon sensors of 0.5 - 1 cm2 cell size, with the remainder of the HCAL based on highly-segmented scintillators with SiPM readout.
+    
+     high-precision timing capabilities of the silicon sensors will add an extra dimension to event reconstruction, especially in terms of pileup rejection
+     
+     Algorithms are being developed to make 3d spatial reconstruction
+     5D imaging calorimeter (x,y,z,t,E)
+    
+\end{frame}
+\begin{frame}{Conclusion?????}
     \begin{itemize}
         \item one
         \item two
