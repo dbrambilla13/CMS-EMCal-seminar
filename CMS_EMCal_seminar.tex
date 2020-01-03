@@ -36,8 +36,6 @@
     \begin{figure}
         \centering
         \includegraphics[width=.85\textwidth]{./img/CERN_LHC.jpg}
-        \caption{inserire didascalia}
-        \label{fig:cern_lhc}
     \end{figure}
 \end{frame}
 
@@ -45,8 +43,6 @@
   \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{./img/CMS_front.jpg}
-        \caption{CMS experiment section view}
-        \label{fig:cms_front}
     \end{figure}
 \end{frame}
 
@@ -54,8 +50,6 @@
   \begin{figure}
         \centering
         \includegraphics[width=.8\textwidth]{./img/CMS_scheme.png}
-        \caption{CMS experiment scheme}
-        \label{fig:cms_scheme}
     \end{figure}
 \end{frame}
 
@@ -85,25 +79,20 @@
     \begin{figure}
         \centering
         \includegraphics[width=\textwidth]{./img/EMCal_Scheme.png}
-        \caption{Emcal Scheme}
-        \label{fig:emcalScheme}
     \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]{Barrel EM Calorimeter}
-  non mi piace molto questa foto, vedi se ne trovi una migliore...
-  \begin{figure}
+    \begin{figure}
         \centering
-        \includegraphics[width=.85\textwidth]{./img/ecal_barrel_photo.jpg}
-        \caption{inserire didascalia}
-        \label{fig:cms_barrel_photo}
+        \includegraphics[width=\textwidth]{./img/ecal_barrel_photo.jpg}
     \end{figure}
 \end{frame}
 
 \begin{frame}{Endcap EM Calorimeter}
     \begin{figure}
         \centering
-        \includegraphics[width=.85\textwidth]{./img/ecal_endcap_photo.jpg}
+        \includegraphics[width=\textwidth]{./img/ecal_endcap_photo.jpg}
         \caption{One of the four "Dees" of the endcap EmCal }
         \label{fig:ecal_dees}
     \end{figure}
@@ -180,16 +169,39 @@
     
 \end{frame}
 
-\begin{frame}{Elettronica e Segnale}
-    voglio dire qualcosa di elettronica ed elaborazione del segnale? è necessario?
+\begin{frame}{Electronics and Signal}
+    \textbf{Front End Electronics} located on-detector, made with radiation resistant circuits. Responsible of:
+    \begin{itemize}
+        \item Amplification and Shaping of the signal
+        \item Digitization at $40\,$MHz
+        \item Send information to trigger to be used for lv. 1 decisions
+        \item Buffer data until reception of a lv. 1 trigger
+        \item Transmit data to off detector electronics
+    \end{itemize}{}
+    \textbf{Off Detector Electronics} located in underground counting rooms
+    \begin{itemize}
+        \item Trigger System
+        \item Readout of full-precision data and delivery to the Event Builder which builds data usable for analysis.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Amplitude Reconstruction}
+    \textbf{Raw Data} is a series of consecutive digitizations at $40\,$MHz (Bunch Crossing Frequency).
+    
+    The simplest method for amplitude reconstruction is a sampling of the maximum of the pulse alone.
+    Otherwise, one can use more samples:
+    \begin{equation}
+        \hat{A} = \sum_{i=0}^{i=N} w_i \times S_i
+    \end{equation}
+    where $S_i$ are the sample values and $w_i$ a series of weights. Then algorithms can be applied for noise reduction and Out-Of-Time Pile Up identification.
 \end{frame}
 
 \begin{frame}{Energy Resolution}
-    Showers in EMCal are reconstructed by building \emph{clusters} of crystals. Best performance is obtained using a simple 3x3 (or 5x5) sliding window centered in the crystal having the maximum energy deposition.
+    Showers in EMCal are reconstructed by building \emph{clusters} of crystals. Best performance is obtained using a 3x3 (or 5x5) sliding window centered in the crystal having the maximum energy deposition.
     \begin{figure}
         \centering
         \includegraphics[height=130pt]{./img/resolution_1.png}
-        \caption{Energy Distribution reconstructed during the test beam (pointed to the centre of the supermodule).}
+        \caption{Energy Distribution reconstructed during the test beam. The beam was pointed to the \emph{centre} of the supermodule).}
         \label{fig:res1}
     \end{figure}{}
 \end{frame}
@@ -198,7 +210,7 @@
     \begin{figure}
         \centering
         \includegraphics[height=150pt]{./img/resolution_2.png}
-        \caption{Energy distribution reconstructed during the test beam (pointed to a \emph{corner} of the supermodule). A single correction function, parametrized from the data, was applied to all regions of the supermodule to take into account variations in shower containment.}
+        \caption{Energy distribution reconstructed during the test beam. The beam was pointed to a \emph{corner} of the supermodule. A single correction function, parametrized from the data, was applied to all regions of the supermodule to take into account variations in shower containment.}
         \label{fig:res2}
     \end{figure}{}
 \end{frame}
