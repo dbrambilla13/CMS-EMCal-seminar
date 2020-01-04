@@ -50,7 +50,7 @@
 \begin{frame}[fragile]{CMS}
   \begin{figure}
         \centering
-        \includegraphics[width=.8\textwidth]{./img/CMS_scheme.png}
+        \includegraphics[width=0.95\textwidth]{./img/CMS_scheme.png}
     \end{figure}
 \end{frame}
 
@@ -58,8 +58,6 @@
 \section{EM Calorimeter}
 
 \begin{frame}[fragile]{EM Calorimeter}
-
-
 
     \textbf{Barrel ECAL}
     \begin{itemize}
@@ -74,6 +72,7 @@
         \item Each endcap divided in 2 "Dees", each with 3662 crystals organized in $5\times5$ supercrystals
         \item crystal lenght: $220$\,mm corresponding to $24.7\,X_0$ 
     \end{itemize}
+    \textbf{Pre-Shower Detector}
 \end{frame}
 
 \begin{frame}{EM Calorimeter Design}
@@ -99,19 +98,9 @@
     \end{figure}
 \end{frame}
 
-%\begin{frame}{Design}
-%    non mi piace molto questa immagine.. ma è un supermodulo del barrel
-%    \begin{figure}
-%        \centering
-%        \includegraphics[width=100pt]{./img/emcal_module.png}
-%        \caption{EmCal module}
-%        \label{fig:emcalModule}
-%    \end{figure}
-%\end{frame}
-
 \begin{frame}{Lead Tungstate ($\text{PbWO}_4$) Crystals}
     \begin{columns}
-        \begin{column}[l]{0.40\textwidth}
+        \begin{column}[l]{0.45\textwidth}
             \begin{figure}
                 \includegraphics[width=\textwidth]{./img/crystals.jpg}
             \end{figure}    
@@ -121,6 +110,7 @@
                 \item $\rho = 8.3\,$g/cm$^3$
                 \item $X_0 = 0.89\,$cm
                 \item Moliere Radius $ = 2.2$\,cm
+                \item $2\times2\times25$\,cm (variable size) 
                 \item Light Output: $4.5$ ph/MeV
                 \item Green-Blue light, max @ 420\,nm
                 \item Polished for internal reflection
@@ -128,7 +118,7 @@
         \end{column}
     \end{columns}
     \bigskip
-    \textbf{High radiation levels} throughout the duration of the experiment $\rightarrow$ wavelength dependent loss of light transmission without changes to the scintillation mechanism.
+    Exposure to \textbf{High radiation levels} causes the formation of \emph{absorption bands} and a wavelength dependent loss of light transmission, without changes to the scintillation mechanism.
     
     Radiation hardness properties are required: the induced light attenuation length must be always greater than 3$\times$ crystal length. 
     
@@ -148,25 +138,25 @@
         \item Vacuum Phototriodes
         \item Essentially photomultipliers, with a single gain stage
         \item Specially designed to withstand the $4$\,T magnetic field
-        \item $22$\,\% quantum efficiency with mean gain of $10.2$ at $0$\,T
+        \item $22$\,\% quantum efficiency with mean gain of $10$ at $0$\,T
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Pre-shower Detector}
-    \emph{Sampling} calorimeter with two layers: lead radiators with silicon strip sensors placed in between.
+    \textbf{Sampling calorimeter} with two layers: lead radiators with silicon strip sensors placed in between.
     Located in the \emph{forward region}, where the angle between couples of photons is more likely to be small, due to the boost of the $\pi_0$.
     
     Main purposes:
     \begin{itemize}
-        \item principal aim: the identification of neutral pions (from their decay products $\pi_0 \rightarrow \gamma \gamma$) within a fiducial region $1.653 < |\eta| < 2.6 $  
-        \item improve position determination of e and $\gamma$ due to its finer granularity (silicon strips $p\simeq2\,$mm).
+        \item principal aim: \textbf{neutral pions identifications} (from their decay products $\pi_0 \rightarrow \gamma \gamma$) within a fiducial region $1.653 < |\eta| < 2.6 $  
+        \item improve position determination of e and $\gamma$ due to its \textbf{finer granularity} (silicon strips $p\simeq2\,$mm).
         \item help electron identification against minimum ionizing particles.
     \end{itemize}{}
     
 \end{frame}
 
 \begin{frame}{Electronics and Signal}
-    \textbf{Front End Electronics} located on-detector, made with radiation resistant circuits. Responsible of:
+    \textsc{\textbf{Front End Electronics}} located on-detector, made with radiation resistant circuits. Responsible of:
     \begin{itemize}
         \item Amplification and Shaping of the signal
         \item Digitization at $40\,$MHz
@@ -174,7 +164,7 @@
         \item Buffer data until reception of a lv. 1 trigger
         \item Transmit data to off detector electronics
     \end{itemize}{}
-    \textbf{Off Detector Electronics} located in underground counting rooms
+    \textsc{\textbf{Off Detector Electronics}} located in underground counting rooms
     \begin{itemize}
         \item Trigger System
         \item Readout of full-precision data and delivery to the Event Builder which builds data usable for analysis.
@@ -185,11 +175,14 @@
     \textbf{Raw Data} is a series of consecutive digitizations at $40\,$MHz (Bunch Crossing Frequency).
     
     The simplest method for amplitude reconstruction is a sampling of the maximum of the pulse alone.
+    
     Otherwise, one can use more samples:
     \begin{equation}
-        \hat{A} = \sum_{i=0}^{i=N} w_i \times S_i
+        \hat{A} = \sum_{i=0}^{i=N} w_i \times S_i ,
     \end{equation}
-    where $S_i$ are the sample values and $w_i$ a series of weights. Then algorithms can be applied for noise reduction and Out-Of-Time Pile Up identification.
+    where $S_i$ are the sample values and $w_i$ a series of weights. 
+    
+    Then algorithms can be applied for noise reduction and Out-Of-Time Pile Up identification.
 \end{frame}
 
 \begin{frame}{Energy Resolution}
@@ -197,7 +190,7 @@
     \begin{figure}
         \centering
         \includegraphics[height=130pt]{./img/resolution_1.png}
-        \caption{Energy Distribution reconstructed during the test beam. The beam was pointed to the \emph{centre} of the supermodule).}
+        \caption{Energy Distribution reconstructed during the test beam. The beam was pointed to the \textbf{center} of the supermodule).}
         \label{fig:res1}
     \end{figure}{}
 \end{frame}
@@ -206,7 +199,7 @@
     \begin{figure}
         \centering
         \includegraphics[height=150pt]{./img/resolution_2.png}
-        \caption{Energy distribution reconstructed during the test beam. The beam was pointed to a \emph{corner} of the supermodule. A single correction function, parametrized from the data, was applied to all regions of the supermodule to take into account variations in shower containment.}
+        \caption{Energy distribution reconstructed during the test beam. The beam was pointed to a \textbf{corner} of the supermodule. A single correction function, parametrized from the data, was applied to all regions of the supermodule to take into account variations in shower containment.}
         \label{fig:res2}
     \end{figure}{}
 \end{frame}
@@ -264,10 +257,11 @@
         \item \textbf{Lab. Measurements} of the crystals light yield, giving a first estimate of the $c_i$ coefficients.
         \item \textbf{Phi independence} Taking advantage of the $\phi$ symmetry of deposited energy to inter-calibrate crystal rings at constant $\eta$.
         \item \textbf{Single electrons} Exploiting single electrons $p$ measurements from the \emph{tracker} to inter-calibrate different crystals in a single module.
-        \item \textbf{Z $\rightarrow$ ee} Reconstruction of the ee invariant mass and calibration exploiting the Z mass constraint, studying the distribution of 
-        \begin{equation}
-            \epsilon^i = \frac{1}{2} \biggl[\biggl(\frac{M^i_\text{inv}}{M_Z}\biggr)^2 - 1\biggr]
-        \end{equation}
+        \item \textbf{Z $\rightarrow$ ee} Reconstruction of the ee invariant mass and calibration exploiting the Z mass constraint. 
+%        Studying the distribution of 
+%        \begin{equation}
+%            \epsilon^i = \frac{1}{2} %\biggl[\biggl(\frac{M^i_\text{inv}}{M_Z}\biggr)^2 - 1\biggr]
+%        \end{equation}
     \end{itemize}
     
 \end{frame}
@@ -317,8 +311,7 @@
     \end{figure}{}
     Objective: integrated luminosity $3000\,\text{fb}^{-1}$ ($10\times$ design value).
     
-    Significative challenges due to \emph{high radiation} and higher \emph{pileup} $\rightarrow$ detector upgrades needed.
-    
+    Experimental challenges due to high \textbf{radiation} and higher \textbf{pileup}: detector upgrades are under development for every detector component.
 \end{frame}
 
 \begin{frame}{Calorimeters Upgrade}
@@ -328,7 +321,7 @@
         \includegraphics[height=150pt]{img/upgrade/doseRad.png}
     \end{figure}{}
     
-    Also calorimeters must be upgraded. The \emph{endcap} calorimeters which are exposed to the highest radiation dose, so will be entirely replaced.
+    The \emph{endcap} calorimeters (HCal and EmCal) are exposed to the highest radiation dose, so will be entirely replaced.
 \end{frame}
 
 \begin{frame}{High Granularity Calorimeter}
@@ -344,18 +337,25 @@
 \begin{frame}{High Granularity Calorimeter}
     It is a \textbf{sampling} calorimeter, consisting of an electromagnetic compartment (CE-E) followed by a hadronic compartment (CE-H).
     
-    The ECAL and a large fraction of HCAL will be based on hexagonal silicon sensors of $0.5 - 1\,\text{cm}^2$ cell size, with the remainder of the HCAL based on highly-segmented scintillators with SiPM readout.
-    Absorber layers are made by Cu (EMCal) and Stainless Steel (HCal).
+    The ECAL and a large fraction of HCAL will be based on hexagonal silicon sensors of $0.5 - 1\,\text{cm}^2$ cell size, with the remainder of the HCAL based on highly-segmented plastic scintillators with SiPM readout.
+    Absorber layers are made of Copper (EMCal) and Stainless Steel (HCal).
 
+    The new HGCAL features:
     \begin{itemize}
         \item unprecedented transverse and longitudinal \textbf{segmentation} for both ECAL and HCAL compartments. 
-        \item \textbf{Fine structure} of showers can be measured $\rightarrow$ better pileup rejection and particle identification
-        \item high-precision \textbf{timing} capabilities due to silicon sensors
-        \item \textbf{5D imaging} calorimeter (x,y,z,t,E) through sophisticated algorithms 
+        \item possibility of measuring the \textbf{Fine structure} of showers $\rightarrow$ better pileup rejection and particle identification
+        \item high-precision \textbf{timing} capabilities thanks to silicon sensors
+        \item \textbf{5D imaging} (x,y,z,t,E) through sophisticated algorithms 
     \end{itemize}{}
 \end{frame}
 
-\begin{frame}{Conclusion?????}
+\begin{frame}{Conclusion}
+    \begin{flushright}
+        \emph{"Questo è quello che dicono... \\Poi, però, non funziona un ca**o!"}
+        
+        - cit. Luigi
+    \end{flushright}
+    \
 \end{frame}
  
 \end{document}    The simplest method for amplitude reconstruction is a sampling of the maximum of the pulse alone.
