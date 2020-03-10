@@ -1,2 +1,2 @@
 # CMS-EMCal-seminar
-Seminar for exam of Luigi Moroni
+Seminar for exam of LM
